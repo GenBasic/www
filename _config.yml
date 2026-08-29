@@ -1,8 +1,8 @@
 title: GenBasic
-tagline: Practical consumer electronics
+tagline: Wireless USB adapters
 description: >-
-  GenBasic makes practical consumer electronics — virtual reality headsets,
-  powered USB hubs and adapters, and wireless input devices.
+  GenBasic wireless USB adapters — 2.4 GHz and dual-band Wi-Fi with Bluetooth,
+  each shipping an open-source Linux driver.
 url: https://genbasic.com
 baseurl: ""
 
