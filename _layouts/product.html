@@ -5,7 +5,9 @@ layout: default
   <nav class="crumbs" aria-label="Breadcrumb">
     <a href="{{ '/products/' | relative_url }}">Products</a>
     <span aria-hidden="true">/</span>
-    <span aria-current="page">{{ page.model }}</span>
+    <a href="{{ '/products/' | append: page.family | append: '/' | relative_url }}">{{ page.family_label }}</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ page.short }}</span>
   </nav>
 
   <div class="prod-top">

@@ -90,7 +90,7 @@ description: >-
              width="1500" height="1257" loading="lazy" decoding="async">
       </div>
       <p class="pn">RF 2A4M1</p>
-      <h3><a href="{{ '/products/rf-2a4m1/' | relative_url }}">Wi-Fi 4 USB 2 Nano<br>Wireless Adapter</a></h3>
+      <h3><a href="{{ '/products/rf/2a4m1/' | relative_url }}">Wi-Fi 4 USB 2 Nano<br>Wireless Adapter</a></h3>
       <dl class="spec">
         <div><dt>Band</dt><dd>2.4 GHz</dd></div>
         <div><dt>Standard</dt><dd>802.11b/g/n</dd></div>
@@ -106,7 +106,7 @@ description: >-
       </p>
       <p class="card-actions">
         <a class="cta buy" href="https://www.amazon.com/dp/B0BNFKJPXS">Buy on Amazon</a>
-        <a class="spec-link" href="{{ '/products/rf-2a4m1/' | relative_url }}">Full specifications &rarr;</a>
+        <a class="spec-link" href="{{ '/products/rf/2a4m1/' | relative_url }}">Full specifications &rarr;</a>
       </p>
     </article>
 
@@ -117,7 +117,7 @@ description: >-
              width="1500" height="1437" loading="lazy" decoding="async">
       </div>
       <p class="pn">RF 2A5R1B4</p>
-      <h3><a href="{{ '/products/rf-2a5r1b4/' | relative_url }}">Wi-Fi 5 + BT 4.2 USB 2<br>Wireless Adapter</a></h3>
+      <h3><a href="{{ '/products/rf/2a5r1b4/' | relative_url }}">Wi-Fi 5 + BT 4.2 USB 2<br>Wireless Adapter</a></h3>
       <dl class="spec">
         <div><dt>Bands</dt><dd>2.4 + 5 GHz</dd></div>
         <div><dt>Standard</dt><dd>802.11ac/b/g/n</dd></div>
@@ -133,7 +133,7 @@ description: >-
       </p>
       <p class="card-actions">
         <a class="cta buy" href="https://www.amazon.com/dp/B0CGF9LVL9">Buy on Amazon</a>
-        <a class="spec-link" href="{{ '/products/rf-2a5r1b4/' | relative_url }}">Full specifications &rarr;</a>
+        <a class="spec-link" href="{{ '/products/rf/2a5r1b4/' | relative_url }}">Full specifications &rarr;</a>
       </p>
     </article>
 
@@ -189,7 +189,7 @@ description: >-
              width="1500" height="1489" loading="lazy" decoding="async">
       </div>
       <p class="pn">5V 3A &middot; UL Listed</p>
-      <h3><a href="{{ '/products/power-supply-5v3a/' | relative_url }}">15W USB Type-C Power Supply<br>with Switch &amp; MicroUSB Adapter</a></h3>
+      <h3><a href="{{ '/products/power/5v3a/' | relative_url }}">15W USB Type-C Power Supply<br>with Switch &amp; MicroUSB Adapter</a></h3>
       <dl class="spec">
         <div><dt>Output</dt><dd>5 V &nbsp;3 A &nbsp;15 W</dd></div>
         <div><dt>Connector</dt><dd>USB Type-C</dd></div>
@@ -206,7 +206,7 @@ description: >-
       </p>
       <p class="card-actions">
         <a class="cta buy" href="https://www.amazon.com/dp/B0C8V23K7Z">Buy on Amazon</a>
-        <a class="spec-link" href="{{ '/products/power-supply-5v3a/' | relative_url }}">Full specifications &rarr;</a>
+        <a class="spec-link" href="{{ '/products/power/5v3a/' | relative_url }}">Full specifications &rarr;</a>
       </p>
     </article>
 

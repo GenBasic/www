@@ -503,6 +503,49 @@ section:last-of-type { margin-bottom: 0; }
   color: var(--ink);
 }
 
+/* ---- family blocks (products index) --------------------------------- */
+
+.family-block { padding-top: 3.5rem; }
+.family-block:last-of-type { padding-bottom: 5rem; }
+
+.family-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  align-items: end;
+  justify-content: space-between;
+  margin-bottom: 1.75rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.family-head h2 {
+  margin: 0 0 0.4rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+}
+
+.family-sub {
+  margin-left: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+  color: var(--fg-mute);
+  vertical-align: 0.22em;
+}
+
+.family-head p {
+  margin: 0;
+  max-width: 54ch;
+  font-size: 0.95rem;
+  color: var(--fg-mute);
+}
+
+.family-head .cta { margin-top: 0; flex: none; }
+
 .card-link { display: block; color: inherit; }
 .card-link:hover { text-decoration: none; }
 .card-link:hover .card-title { color: var(--accent); }
