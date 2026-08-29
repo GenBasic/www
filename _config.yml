@@ -1,0 +1,17 @@
+title: GenBasic
+tagline: Practical consumer electronics
+description: >-
+  GenBasic makes practical consumer electronics — virtual reality headsets,
+  powered USB hubs and adapters, and wireless input devices.
+url: https://genbasic.com
+baseurl: ""
+
+# Built by GitHub Pages' native Jekyll. No plugins beyond the Pages default set,
+# and no remote theme: the layout in _layouts/ is self-contained so the build has
+# nothing to resolve at publish time.
+theme:
+plugins: []
+
+exclude:
+  - README.md
+  - LICENSE
