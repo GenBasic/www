@@ -2,35 +2,42 @@
 layout: default
 title: GenBasic
 description: >-
-  GenBasic builds wireless adapters and power supplies for commercial and
-  embedded use — tightly specified, tested together, and sold under stable
-  model numbers.
+  GenBasic USB Wi-Fi and Bluetooth adapters and UL-listed power supplies for
+  Raspberry Pi, Libre Computer and other single-board computers.
 ---
 
 <section class="hero">
-  <div class="hero-inner">
-    <p class="eyebrow">Electronics for commercial deployment</p>
-    <h1>Parts you can<br><span class="grad">put in a product.</span></h1>
-    <p class="lede">
-      Wireless adapters and power supplies built for commercial and embedded
-      use — specified tightly enough to design around, tested against the
-      hardware they ship beside, and carried under model numbers that mean one
-      fixed thing.
-    </p>
-    <div class="hero-stats">
-      <div><b>UL</b><span>listed power</span></div>
-      <div><b>WPA3</b><span>SAE &middot; 802.1X</span></div>
-      <div><b>Mainline</b><span>kernel drivers</span></div>
-      <div><b>2.4&nbsp;/&nbsp;5</b><span>GHz dual band</span></div>
+  <div class="hero-grid">
+    <div class="hero-inner">
+      <p class="eyebrow">USB wireless &amp; power</p>
+      <h1>Wireless and power for<br><span class="grad">single-board computers.</span></h1>
+      <p class="lede">
+        Two USB adapters and a power supply, for boards that have to stay up:
+        fixed specifications, in-kernel Linux drivers, and a UL-listed supply
+        that holds 5&nbsp;V under load.
+      </p>
+      <p class="hero-actions">
+        <a class="cta" href="{{ '/products/' | relative_url }}">See the products</a>
+      </p>
     </div>
+    <div class="hero-art" aria-hidden="true">
+      <img src="{{ '/assets/img/wifi5-bt-mini.jpg' | relative_url }}" alt=""
+           width="1500" height="1437" decoding="async">
+    </div>
+  </div>
+
+  <div class="hero-stats">
+    <div><b>2.4 / 5</b><span>GHz, dual band</span></div>
+    <div><b>433</b><span>Mbps, 802.11ac</span></div>
+    <div><b>WPA3</b><span>SAE &middot; 802.1X</span></div>
+    <div><b>15 W</b><span>UL Listed, 5 V 3 A</span></div>
   </div>
 </section>
 
 <section id="approach">
   <div class="sec-head">
-    <h2>What the brand is for</h2>
-    <p>A commercial buyer needs different things from a retail one. Three of
-       them, and what each actually means here.</p>
+    <h2>How these are built</h2>
+    <p>Three things we hold fixed, and what each one means on the bench.</p>
   </div>
 
   <div class="grid three">
@@ -39,11 +46,9 @@ description: >-
       <p class="pillar-n">01</p>
       <h3>Quality</h3>
       <p>
-        The power supply is <b>UL Listed</b> — a safety certification held
-        against a file number, not a self-declaration. The adapters are
-        engineered to stay inside a USB 2.0 port's 500 mA budget instead of
-        over-drawing it, which is what keeps a hub or an SBC stable when
-        several are populated at once.
+        The supply is <b>UL Listed</b> — certified against a file number, not
+        a claim printed on a box. The adapters draw inside a USB 2.0 port's
+        500 mA, so populating several on one hub does not pull the rail down.
       </p>
     </article>
 
@@ -51,11 +56,9 @@ description: >-
       <p class="pillar-n">02</p>
       <h3>Testing</h3>
       <p>
-        The adapters are validated against the supply that powers them, which
-        is why the adapter documentation names a specific one rather than
-        leaving it to chance. Both are tested on current Linux LTS kernels and
-        on official Libre Computer images — the configurations they are
-        actually deployed in.
+        Adapters are tested against the supply that powers them, which is why
+        the documentation names one rather than leaving it to chance. Both run
+        on current Linux LTS kernels and official Libre Computer images.
       </p>
     </article>
 
@@ -63,10 +66,9 @@ description: >-
       <p class="pillar-n">03</p>
       <h3>Availability</h3>
       <p>
-        A model number identifies one fixed radio specification, so a unit
-        bought later is the unit you qualified. Staying on in-kernel drivers
-        means there is no out-of-tree module to rebuild each kernel upgrade —
-        a deployed fleet keeps working across OS updates on its own.
+        A model number fixes one radio specification, so a unit bought later
+        is the unit you qualified. In-kernel drivers mean nothing to rebuild
+        when the OS updates.
       </p>
     </article>
 
@@ -76,61 +78,49 @@ description: >-
 <section id="adapters">
   <div class="sec-head">
     <h2>Wireless adapters</h2>
-    <p>Both built on the kernel's own <code>mac80211</code> / <code>cfg80211</code>
-       stack, so in-kernel wireless management works normally — no vendor tool,
-       no out-of-tree module to rebuild every kernel upgrade.</p>
+    <p>Both sit on the kernel's own mac80211 / cfg80211 stack, so in-kernel
+       wireless management works normally — no vendor tool, no out-of-tree
+       module to rebuild every kernel upgrade.</p>
   </div>
 
   <div class="grid two">
 
     <article class="card">
-      <div class="shot">
-        <img src="{{ '/assets/img/wifi4-nano.jpg' | relative_url }}"
-             alt="GenBasic RF 2A4M1 Wi-Fi 4 USB nano adapter, a small black USB plug marked 2A4M1 and GenBasic"
-             width="1500" height="1257" loading="lazy" decoding="async">
-      </div>
-      <p class="pn">RF 2A4M1</p>
-      <h3><a href="{{ '/products/rf/2a4m1/' | relative_url }}">Wi-Fi 4 USB 2 Nano<br>Wireless Adapter</a></h3>
-      <dl class="spec">
-        <div><dt>Band</dt><dd>2.4 GHz</dd></div>
-        <div><dt>Standard</dt><dd>802.11b/g/n</dd></div>
-        <div><dt>Rate</dt><dd>up to 150 Mbps <span class="dim">(40 MHz)</span></dd></div>
-        <div><dt>Bluetooth</dt><dd class="none">&mdash;</dd></div>
-        <div><dt>Antenna</dt><dd>1T1R, 2 dBi integrated</dd></div>
-        <div><dt>Size</dt><dd>19 &times; 14 &times; 5 mm</dd></div>
-        <div><dt>Bus</dt><dd>USB 2.0 Type-A</dd></div>
-      </dl>
-      <p class="card-note">
-        Small enough to leave the neighbouring USB ports clear, and low-power
-        enough to live inside a USB 2.0 port's 500 mA budget.
-      </p>
+      <a class="card-link" href="{{ '/products/rf/2a4m1/' | relative_url }}">
+        <div class="shot">
+          <img src="{{ '/assets/img/wifi4-nano.jpg' | relative_url }}"
+               alt="GenBasic RF 2A4M1 Wi-Fi 4 USB nano adapter"
+               width="1500" height="1257" loading="lazy" decoding="async">
+        </div>
+        <p class="pn">RF 2A4M1</p>
+        <h3 class="card-title">Wi-Fi 4 USB 2 Nano Wireless Adapter</h3>
+      </a>
+      <ul class="highlights compact">
+        <li>2.4 GHz 802.11b/g/n, up to 150 Mbps</li>
+        <li>19 × 14 × 5 mm nano housing</li>
+        <li>No Bluetooth radio</li>
+      </ul>
       <p class="card-actions">
         <a class="cta buy" href="https://www.amazon.com/dp/B0BNFKJPXS">Buy on Amazon</a>
         <a class="spec-link" href="{{ '/products/rf/2a4m1/' | relative_url }}">Full specifications &rarr;</a>
       </p>
     </article>
 
-    <article class="card feature">
-      <div class="shot">
-        <img src="{{ '/assets/img/wifi5-bt-mini.jpg' | relative_url }}"
-             alt="GenBasic RF 2A5R1B4 Wi-Fi 5 Bluetooth USB mini adapter, a black USB plug marked GenBasic"
-             width="1500" height="1437" loading="lazy" decoding="async">
-      </div>
-      <p class="pn">RF 2A5R1B4</p>
-      <h3><a href="{{ '/products/rf/2a5r1b4/' | relative_url }}">Wi-Fi 5 + BT 4.2 USB 2<br>Wireless Adapter</a></h3>
-      <dl class="spec">
-        <div><dt>Bands</dt><dd>2.4 + 5 GHz</dd></div>
-        <div><dt>Standard</dt><dd>802.11ac/b/g/n</dd></div>
-        <div><dt>Rate</dt><dd>up to 433 Mbps <span class="dim">(80 MHz)</span></dd></div>
-        <div><dt>Bluetooth</dt><dd class="yes">4.2</dd></div>
-        <div><dt>Antenna</dt><dd>1T1R, 2 dBi integrated</dd></div>
-        <div><dt>Size</dt><dd>33 &times; 15 &times; 8 mm</dd></div>
-        <div><dt>Bus</dt><dd>USB 2.0 Type-A</dd></div>
-      </dl>
-      <p class="card-note">
-        Dual-band with Bluetooth on the same dongle. Plug and play on Linux
-        6.2 and newer, and on official Libre Computer images.
-      </p>
+    <article class="card">
+      <a class="card-link" href="{{ '/products/rf/2a5r1b4/' | relative_url }}">
+        <div class="shot">
+          <img src="{{ '/assets/img/wifi5-bt-mini.jpg' | relative_url }}"
+               alt="GenBasic RF 2A5R1B4 Wi-Fi 5 Bluetooth USB mini adapter"
+               width="1500" height="1437" loading="lazy" decoding="async">
+        </div>
+        <p class="pn">RF 2A5R1B4</p>
+        <h3 class="card-title">Wi-Fi 5 + BT 4.2 USB 2 Wireless Adapter</h3>
+      </a>
+      <ul class="highlights compact">
+        <li>2.4 + 5 GHz 802.11ac, up to 433 Mbps</li>
+        <li>Bluetooth 4.2 dual-mode</li>
+        <li>33 × 15 × 8 mm</li>
+      </ul>
       <p class="card-actions">
         <a class="cta buy" href="https://www.amazon.com/dp/B0CGF9LVL9">Buy on Amazon</a>
         <a class="spec-link" href="{{ '/products/rf/2a5r1b4/' | relative_url }}">Full specifications &rarr;</a>
@@ -167,43 +157,36 @@ description: >-
   </div>
 
   <p class="fineprint">
-    Quoted rates are PHY rates and need an access point advertising the wider
-    channel — 40 MHz for 150 Mbps, 80 MHz for 433 Mbps. On 20 MHz channels the
-    Wi-Fi 4 adapter tops out at 72.2 Mbps. Real throughput depends on signal to
-    noise and runs near 75% of PHY rate in a quiet environment at 10 m.
+    Rates are PHY rates and need an access point advertising the wider channel
+    — 40 MHz for 150 Mbps, 80 MHz for 433 Mbps. On 20 MHz the Wi-Fi 4 adapter
+    tops out at 72.2 Mbps. Real throughput tracks signal to noise and runs near
+    75% of PHY rate in a quiet environment at 10 m.
   </p>
 </section>
 
 <section id="power">
   <div class="sec-head">
     <h2>Power</h2>
-    <p>Most "flaky USB" on a single-board computer is a power problem wearing a
-       disguise. This is the supply we test the adapters against.</p>
+    <p>Most "flaky USB" on a single-board computer is a power problem wearing
+       a disguise. This is the supply the adapters are tested against.</p>
   </div>
 
   <div class="grid two">
     <article class="card">
-      <div class="shot">
-        <img src="{{ '/assets/img/power-supply.jpg' | relative_url }}"
-             alt="GenBasic 5V 3A 15W USB Type-C power supply with an inline switch with red button and status LED"
-             width="1500" height="1489" loading="lazy" decoding="async">
-      </div>
-      <p class="pn">5V 3A &middot; UL Listed</p>
-      <h3><a href="{{ '/products/power/5v3a/' | relative_url }}">15W USB Type-C Power Supply<br>with Switch &amp; MicroUSB Adapter</a></h3>
-      <dl class="spec">
-        <div><dt>Output</dt><dd>5 V &nbsp;3 A &nbsp;15 W</dd></div>
-        <div><dt>Connector</dt><dd>USB Type-C</dd></div>
-        <div><dt>Included</dt><dd>MicroUSB adapter</dd></div>
-        <div><dt>Cable</dt><dd>1.5 m</dd></div>
-        <div><dt>Switch</dt><dd>Inline, status LED</dd></div>
-        <div><dt>Safety</dt><dd class="yes">UL Listed</dd></div>
-        <div><dt>Plug</dt><dd>US</dd></div>
-      </dl>
-      <p class="card-note">
-        Fits Raspberry Pi 3 and 4 and Libre Computer boards — Type-C natively,
-        MicroUSB with the bundled adapter. The switch saves unplugging the
-        cable every reboot.
-      </p>
+      <a class="card-link" href="{{ '/products/power/5v3a/' | relative_url }}">
+        <div class="shot">
+          <img src="{{ '/assets/img/power-supply.jpg' | relative_url }}"
+               alt="GenBasic 5V 3A 15W USB Type-C power supply with inline switch"
+               width="1500" height="1489" loading="lazy" decoding="async">
+        </div>
+        <p class="pn">5V 3A &middot; UL Listed</p>
+        <h3 class="card-title">15W USB Type-C Power Supply with Switch</h3>
+      </a>
+      <ul class="highlights compact">
+        <li>5 V 3 A · 15 W, UL Listed</li>
+        <li>USB Type-C, MicroUSB adapter included</li>
+        <li>Inline switch with status LED, 1.5 m cable</li>
+      </ul>
       <p class="card-actions">
         <a class="cta buy" href="https://www.amazon.com/dp/B0C8V23K7Z">Buy on Amazon</a>
         <a class="spec-link" href="{{ '/products/power/5v3a/' | relative_url }}">Full specifications &rarr;</a>
@@ -213,15 +196,14 @@ description: >-
     <div class="callout">
       <h3>Why it matters for a dongle</h3>
       <p>
-        A wireless adapter that drops off the USB bus, disappears after a few
-        minutes, or shows poor throughput is usually being browned out rather
-        than failing. USB 2.0 gives a port 500 mA, and both adapters above are
-        designed to stay inside that — but only if the board itself is being
-        fed 5 V under load.
+        An adapter that drops off the USB bus, disappears after a few minutes
+        or runs slow is usually being browned out rather than failing. USB 2.0
+        budgets a port 500 mA, and both adapters are designed to stay inside
+        that — but only if the board itself is being fed 5 V under load.
       </p>
       <p>
-        If a board reboots at random or the adapter never enumerates, check the
-        supply and the cable gauge before suspecting the radio.
+        If a board reboots at random or the adapter never enumerates, check
+        the supply and the cable gauge before suspecting the radio.
       </p>
     </div>
   </div>
@@ -232,20 +214,19 @@ description: >-
     <div>
       <h2>On Linux</h2>
       <p class="big">
-        No installer, no vendor daemon, no module to rebuild after every kernel
-        upgrade.
+        No installer, no vendor daemon, no module to rebuild after every
+        kernel upgrade.
       </p>
       <p>
         Both adapters sit on the kernel's <code>mac80211</code> and
         <code>cfg80211</code> frameworks, so NetworkManager, <code>iw</code>,
-        <code>wpa_supplicant</code> and everything else that speaks to in-kernel
-        wireless treats them as ordinary devices. AP mode and monitor mode both
-        work.
+        <code>wpa_supplicant</code> and everything else that speaks to
+        in-kernel wireless treats them as ordinary devices. AP mode and
+        monitor mode both work.
       </p>
       <p>
-        WPA3 SAE is supported, alongside 802.1X network access control — worth
-        having, since WPA2 passwords no longer survive a determined offline
-        attack.
+        WPA3 SAE is supported alongside 802.1X access control — worth having,
+        since WPA2 passwords no longer survive a determined offline attack.
       </p>
     </div>
     <div class="panel">

@@ -169,6 +169,33 @@ section:last-of-type { margin-bottom: 0; }
 
 .hero-inner { position: relative; }
 
+/* The hero used to be a single left-hand text column, leaving the right half
+   of a 1440px viewport empty. This is a hardware brand -- the space belongs to
+   the hardware. */
+.hero-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero-art {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.hero-art img {
+  width: 100%;
+  max-width: 26rem;
+  height: auto;
+  mix-blend-mode: multiply;
+}
+
+.hero-actions { margin: 2rem 0 0; }
+
 .eyebrow {
   margin: 0 0 1.1rem;
   font-family: var(--mono);
@@ -226,15 +253,26 @@ section:last-of-type { margin-bottom: 0; }
 
 /* ---- product cards -------------------------------------------------- */
 
+/* Explicit column counts, not auto-fit. auto-fit collapses empty tracks, so a
+   grid holding ONE card stretches it edge to edge -- which is exactly what the
+   single-product Power family did at 1440px. */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.25rem;
   margin-bottom: 2rem;
+  align-items: start;
 }
 
-.grid.two { grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); }
-.grid.three { grid-template-columns: repeat(auto-fit, minmax(15.5rem, 1fr)); }
+.grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+@media (max-width: 60rem) {
+  .grid, .grid.three { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 40rem) {
+  .grid, .grid.two, .grid.three { grid-template-columns: minmax(0, 1fr); }
+}
 
 /* Brand pillars. Deliberately not cards -- a rule and open space, so they read
    as positioning rather than as three more products. */
@@ -334,10 +372,13 @@ section:last-of-type { margin-bottom: 0; }
 
 .spec { margin: 0 0 1.2rem; }
 
+/* Two real columns rather than flex space-between. A long value ("150 Mbps at
+   40 MHz · 72.2 Mbps at 20 MHz") wrapped ragged against a right edge before;
+   here it wraps inside its own column and stays readable. */
 .spec > div {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: minmax(0, 8.5rem) minmax(0, 1fr);
+  gap: 0.5rem 1rem;
   padding: 0.52rem 0;
   border-top: 1px solid var(--line-soft);
   font-size: 0.9rem;
@@ -345,7 +386,7 @@ section:last-of-type { margin-bottom: 0; }
 .spec > div:first-child { border-top: 0; padding-top: 0; }
 
 .spec dt { color: var(--fg-mute); }
-.spec dd { margin: 0; text-align: right; color: var(--ink); font-weight: 550; }
+.spec dd { margin: 0; color: var(--ink); font-weight: 550; }
 
 .dim { color: var(--fg-mute); font-weight: 400; }
 .yes { color: var(--accent); font-weight: 600; }
@@ -383,7 +424,7 @@ section:last-of-type { margin-bottom: 0; }
   align-items: start;
 }
 
-.shot.large { aspect-ratio: 1 / 1; margin: 0; padding: 1.5rem; }
+.shot.large { aspect-ratio: 4 / 3; margin: 0; padding: 1rem; }
 
 .prod-id h1 {
   margin: 0 0 1rem;
@@ -446,11 +487,48 @@ section:last-of-type { margin-bottom: 0; }
   color: var(--accent);
 }
 
+/* align-items:start so a two-row group (Security) is not stretched to match a
+   six-row one (Radio) and left half empty. */
 .spec-groups {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
   gap: 1.15rem;
+  align-items: start;
 }
+
+/* Overview prose beside its notes, rather than prose alone against an empty
+   right half of the page. */
+.prod-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.notes {
+  background: var(--bg-tint);
+  border: 1px solid var(--line-soft);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 1.35rem;
+}
+
+.notes h3 {
+  margin: 0 0 0.7rem;
+  font-size: 0.73rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+  color: var(--fg-mute);
+}
+
+.notes p {
+  margin: 0 0 0.8rem;
+  font-size: 0.89rem;
+  line-height: 1.65;
+  color: var(--fg-dim);
+}
+.notes p:last-child { margin-bottom: 0; }
 
 .spec-group {
   background: var(--bg-tint);
@@ -727,13 +805,14 @@ tbody tr:hover th, tbody tr:hover td { background: var(--bg-tint); }
   text-align: center;
 }
 
+/* Inline code sits mid-sentence in body copy; a bordered chip was too loud
+   there. Tint only. */
 code {
   font-family: var(--mono);
-  font-size: 0.88em;
-  padding: 0.1em 0.35em;
-  border-radius: 5px;
+  font-size: 0.86em;
+  padding: 0.08em 0.28em;
+  border-radius: 4px;
   background: var(--surface-2);
-  border: 1px solid var(--line-soft);
   color: var(--ink);
 }
 
@@ -775,6 +854,10 @@ code {
   #linux { padding-bottom: 3.5rem; }
   .prod-top { grid-template-columns: 1fr; gap: 2rem; }
   .prod-sec { padding-top: 3rem; }
+  .prod-body { grid-template-columns: 1fr; gap: 1.75rem; }
+  .hero-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .hero-art { order: -1; padding: 0; }
+  .hero-art img { max-width: 18rem; }
   .split { grid-template-columns: 1fr; gap: 1.75rem; }
   .foot-legal { margin-left: 0; width: 100%; }
 }

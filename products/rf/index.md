@@ -3,6 +3,7 @@ layout: family
 permalink: /products/rf/
 family: rf
 family_label: RF
+family_order: 1
 eyebrow: Wireless adapters
 heading: RF
 title: RF — Wireless Adapters

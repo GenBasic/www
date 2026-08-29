@@ -18,7 +18,7 @@ layout: default
 
     <div class="prod-id">
       <p class="pn">{{ page.model }}</p>
-      <h1>{{ page.name }}</h1>
+      <h1>{{ page.product_name }}</h1>
       <p class="lede">{{ page.summary }}</p>
 
       {% if page.highlights %}
@@ -36,7 +36,15 @@ layout: default
 {% if page.overview %}
 <section class="prod-sec">
   <h2>Overview</h2>
-  <div class="prose">{{ page.overview | markdownify }}</div>
+  <div class="prod-body">
+    <div class="prose">{{ page.overview | markdownify }}</div>
+    {% if page.notes %}
+    <aside class="notes">
+      <h3>Notes</h3>
+      {{ page.notes | markdownify }}
+    </aside>
+    {% endif %}
+  </div>
 </section>
 {% endif %}
 
@@ -56,13 +64,6 @@ layout: default
   </div>
 </section>
 
-{% if page.notes %}
-<section class="prod-sec">
-  <h2>Notes</h2>
-  <div class="prose">{{ page.notes | markdownify }}</div>
-</section>
-{% endif %}
-
 <section class="prod-sec" id="other">
   <h2>Other products</h2>
   <div class="grid three">
@@ -74,7 +75,7 @@ layout: default
              height="{{ p.image_h }}" loading="lazy" decoding="async">
       </div>
       <p class="pn">{{ p.model }}</p>
-      <p class="mini-name">{{ p.name }}</p>
+      <p class="mini-name">{{ p.product_name }}</p>
     </a>
     {% endunless %}{% endfor %}
   </div>

@@ -1,9 +1,8 @@
 title: GenBasic
-tagline: Electronics for commercial deployment
+tagline: USB wireless adapters and power supplies
 description: >-
-  GenBasic builds wireless adapters and power supplies for commercial and
-  embedded use — tightly specified, tested together, and sold under stable
-  model numbers.
+  GenBasic USB Wi-Fi and Bluetooth adapters and UL-listed power supplies for
+  Raspberry Pi, Libre Computer and other single-board computers.
 url: https://genbasic.com
 baseurl: ""
 

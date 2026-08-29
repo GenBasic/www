@@ -3,6 +3,7 @@ layout: family
 permalink: /products/power/
 family: power
 family_label: Power
+family_order: 2
 eyebrow: Power supplies
 heading: Power
 title: Power — Supplies for Single-Board Computers

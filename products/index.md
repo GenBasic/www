@@ -3,8 +3,8 @@ layout: default
 permalink: /products/
 title: Products
 description: >-
-  The GenBasic catalogue — RF wireless adapters and power supplies for
-  commercial and embedded deployment.
+  The GenBasic catalogue — RF wireless adapters and UL-listed power supplies
+  for single-board computers and embedded hosts.
 ---
 
 <section class="page-head">
@@ -16,7 +16,7 @@ description: >-
   </p>
 </section>
 
-{% assign families = site.pages | where: "layout", "family" | sort: "family" %}
+{% assign families = site.pages | where: "layout", "family" | sort: "family_order" %}
 {% for f in families %}
 <section class="family-block">
   <div class="family-head">
@@ -38,7 +38,7 @@ description: >-
                loading="lazy" decoding="async">
         </div>
         <p class="pn">{{ p.model }}</p>
-        <h3 class="card-title">{{ p.name }}</h3>
+        <h3 class="card-title">{{ p.product_name }}</h3>
       </a>
       {% if p.highlights %}
       <ul class="highlights compact">
