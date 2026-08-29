@@ -1,0 +1,97 @@
+---
+layout: product
+permalink: /products/rf-2a5r1b4/
+type: product
+order: 2
+
+model: RF 2A5R1B4
+name: Wi-Fi 5 + BT 4.2 USB 2 Wireless Adapter
+title: RF 2A5R1B4 — Wi-Fi 5 + Bluetooth USB Adapter
+description: >-
+  GenBasic RF 2A5R1B4 — a dual-band 802.11ac USB adapter with Bluetooth 4.2
+  dual-mode, plug and play on Linux 6.2 and newer.
+summary: >-
+  Dual-band Wi-Fi and dual-mode Bluetooth on one USB 2.0 adapter, for
+  deployments that need 5 GHz to escape a crowded 2.4 GHz band, a Bluetooth
+  radio, or both from a single port.
+
+image: /assets/img/wifi5-bt-mini.jpg
+image_w: 1500
+image_h: 1437
+image_alt: >-
+  GenBasic RF 2A5R1B4 Wi-Fi 5 Bluetooth USB mini adapter, a black USB plug
+  marked GenBasic
+
+buy: https://www.amazon.com/dp/B0CGF9LVL9
+
+highlights:
+  - 2.4 + 5 GHz 802.11ac, up to 433 Mbps
+  - Bluetooth 4.2 dual-mode (BR/EDR + LE)
+  - WPA3 SAE and 802.1X
+  - Plug and play on Linux 6.2+
+
+overview: |
+  RF 2A5R1B4 puts both radios on one port. The Wi-Fi side is dual-band
+  802.11ac at a single stream; the Bluetooth side is dual-mode, so both
+  BR/EDR and LE peripherals work rather than LE alone.
+
+  The 5 GHz band is the reason most deployments choose it. A 2.4 GHz-only
+  adapter is at the mercy of every other radio in the building, and on a
+  congested site the achievable rate collapses regardless of the adapter's
+  own specification. Moving to 5 GHz is usually a larger real-world gain
+  than any spec-sheet difference between adapters.
+
+  It is single-stream deliberately. Wi-Fi throughput on one 802.11ac channel
+  peaks below USB 2.0 bandwidth, so a USB 3.0 interface would roughly double
+  the power draw without improving the link.
+
+specs:
+  - group: Radio
+    items:
+      - k: Bands
+        v: 2.4 + 5 GHz
+      - k: Standard
+        v: 802.11ac/b/g/n (Wi-Fi 5)
+      - k: Max PHY rate
+        v: 433 Mbps at 80 MHz · 150 Mbps at 40 MHz
+      - k: Spatial streams
+        v: 1T1R
+      - k: Antenna
+        v: 2 dBi integrated
+      - k: Bluetooth
+        v: 4.2 dual-mode (BR/EDR + LE)
+  - group: Security
+    items:
+      - k: Encryption
+        v: WPA3 SAE · WPA2
+      - k: Access control
+        v: 802.1X
+  - group: Interface
+    items:
+      - k: Bus
+        v: USB 2.0 Type-A
+      - k: Power budget
+        v: Within USB 2.0 500 mA
+      - k: Dimensions
+        v: 33 × 15 × 8 mm
+  - group: Software
+    items:
+      - k: Stack
+        v: mac80211 / cfg80211
+      - k: Modes
+        v: Station · AP · monitor
+      - k: Linux
+        v: 6.2 and newer, no install
+      - k: Other
+        v: Windows
+
+notes: |
+  Rates are PHY rates. 433 Mbps requires an access point advertising 80 MHz
+  channels; on 40 MHz the ceiling is 150 Mbps. Real throughput depends on
+  signal to noise and reaches roughly 75% of PHY rate in a quiet environment
+  at 10 m.
+
+  If the adapter drops off the USB bus or the board reboots at random, check
+  the supply and cable gauge before suspecting the radio — see the
+  [5V 3A power supply](/products/power-supply-5v3a/).
+---

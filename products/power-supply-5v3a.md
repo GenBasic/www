@@ -1,0 +1,85 @@
+---
+layout: product
+permalink: /products/power-supply-5v3a/
+type: product
+order: 3
+
+model: 5V 3A · UL Listed
+name: 15W USB Type-C Power Supply with Switch
+title: 5V 3A 15W USB-C Power Supply — GenBasic
+description: >-
+  GenBasic 5V 3A 15W UL Listed USB Type-C power supply with an inline switch,
+  status LED and MicroUSB adapter, for Raspberry Pi and Libre Computer boards.
+summary: >-
+  A UL Listed 15 W supply with an inline switch and a MicroUSB adapter in the
+  box — sized for single-board computers that brown out on a phone charger.
+
+image: /assets/img/power-supply.jpg
+image_w: 1500
+image_h: 1489
+image_alt: >-
+  GenBasic 5V 3A 15W USB Type-C power supply with an inline switch with a red
+  button and status LED
+
+buy: https://www.amazon.com/dp/B0C8V23K7Z
+
+highlights:
+  - 5 V 3 A · 15 W, UL Listed
+  - USB Type-C, MicroUSB adapter included
+  - Inline switch with status LED
+  - 1.5 m cable
+
+overview: |
+  Most "flaky USB" on a single-board computer is a power problem wearing a
+  disguise. A board fed from a spare phone charger sags under load, and the
+  symptoms surface everywhere except the supply: an adapter that vanishes
+  from the bus, storage that corrupts, a board that reboots under load.
+
+  This supply is specified for that job — 3 A at 5 V, held up under load,
+  and **UL Listed**, which is a safety certification granted against a file
+  number rather than a claim printed on a box.
+
+  The inline switch is the detail people keep it for. A board with no power
+  button otherwise gets power-cycled by pulling the connector, which wears
+  the socket and eventually the board.
+
+specs:
+  - group: Output
+    items:
+      - k: Voltage
+        v: 5 V
+      - k: Current
+        v: 3 A
+      - k: Power
+        v: 15 W
+      - k: Connector
+        v: USB Type-C
+      - k: Included adapter
+        v: MicroUSB
+  - group: Physical
+    items:
+      - k: Cable
+        v: 1.5 m
+      - k: Switch
+        v: Inline, with status LED
+      - k: Plug
+        v: US
+  - group: Safety
+    items:
+      - k: Certification
+        v: UL Listed
+  - group: Compatibility
+    items:
+      - k: Boards
+        v: Raspberry Pi 3 / 4, Libre Computer
+      - k: Type-C boards
+        v: Direct
+      - k: MicroUSB boards
+        v: Via included adapter
+
+notes: |
+  A 5 V board is only as stable as the voltage it actually sees, which is the
+  supply *and* the cable. If a board misbehaves under load, check that
+  connectors are fully seated and that the cable gauge is heavy enough to
+  keep ohmic loss down over its length.
+---

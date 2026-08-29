@@ -362,6 +362,173 @@ section:last-of-type { margin-bottom: 0; }
 .card > p:last-child { margin: auto 0 0; padding-top: 0.35rem; }
 .card > p:last-child .cta { margin-right: 0.4rem; }
 
+/* ---- product page --------------------------------------------------- */
+
+.crumbs {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 1.75rem;
+  font-size: 0.88rem;
+  color: var(--fg-mute);
+}
+.crumbs span[aria-hidden] { color: var(--line); }
+
+.prod-hero { padding-top: 2.5rem; }
+
+.prod-top {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 3rem;
+  align-items: start;
+}
+
+.shot.large { aspect-ratio: 1 / 1; margin: 0; padding: 1.5rem; }
+
+.prod-id h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.7rem, 3.4vw, 2.35rem);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+}
+
+.prod-id .lede { font-size: 1.04rem; margin-bottom: 1.5rem; }
+
+.highlights {
+  margin: 0 0 1.75rem;
+  padding: 0;
+  list-style: none;
+}
+
+.highlights li {
+  position: relative;
+  padding: 0.42rem 0 0.42rem 1.5rem;
+  border-top: 1px solid var(--line-soft);
+  font-size: 0.93rem;
+  color: var(--fg-dim);
+}
+.highlights li:first-child { border-top: 0; }
+
+.highlights li::before {
+  content: "";
+  position: absolute;
+  left: 0.25rem;
+  top: 1.05rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.highlights.compact {
+  margin-bottom: 1.15rem;
+  font-size: 0.88rem;
+}
+
+.buy-note {
+  margin: 0.65rem 0 0;
+  font-size: 0.83rem;
+  color: var(--fg-mute);
+}
+
+.prod-sec { padding-top: 4rem; }
+.prod-sec:last-of-type { padding-bottom: 5rem; }
+
+.prod-sec > h2 {
+  margin: 0 0 1.6rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  color: var(--accent);
+}
+
+.spec-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  gap: 1.15rem;
+}
+
+.spec-group {
+  background: var(--bg-tint);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
+  padding: 1.35rem;
+}
+
+.spec-group h3 {
+  margin: 0 0 0.9rem;
+  font-size: 0.95rem;
+  font-weight: 650;
+  color: var(--ink);
+}
+
+.prose { max-width: 68ch; }
+.prose p { margin: 0 0 1.1rem; color: var(--fg-dim); }
+.prose p:last-child { margin-bottom: 0; }
+.prose strong { color: var(--ink); font-weight: 650; }
+
+/* Compact related-products strip at the foot of a product page. */
+.mini {
+  display: block;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.15rem;
+  box-shadow: var(--shadow);
+  transition: border-color .16s ease, transform .16s ease;
+}
+.mini:hover { border-color: #ccd4de; transform: translateY(-2px); text-decoration: none; }
+
+.mini-shot { aspect-ratio: 3 / 2; margin-bottom: 1rem; }
+
+.mini-name {
+  margin: 0;
+  font-size: 0.93rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--ink);
+}
+
+/* ---- page head (products index) ------------------------------------- */
+
+.page-head { padding-top: 3.5rem; padding-bottom: 0; }
+.page-head h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 4.5vw, 2.9rem);
+  letter-spacing: -0.035em;
+  color: var(--ink);
+}
+
+.card-link { display: block; color: inherit; }
+.card-link:hover { text-decoration: none; }
+.card-link:hover .card-title { color: var(--accent); }
+
+.card-title {
+  margin: 0 0 1.15rem;
+  font-size: 1.06rem;
+  font-weight: 650;
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+
+.card h3 a { color: inherit; }
+.card h3 a:hover { color: var(--accent); text-decoration: none; }
+
+.card-actions { display: block; }
+
+.spec-link {
+  display: block;
+  margin-top: 0.7rem;
+  text-align: center;
+  font-size: 0.88rem;
+  font-weight: 550;
+}
+
 /* ---- callout -------------------------------------------------------- */
 
 .callout {
@@ -563,6 +730,8 @@ code {
   .hero { padding-top: 3.5rem; }
   #power { margin-top: 3.5rem; padding-bottom: 3.5rem; }
   #linux { padding-bottom: 3.5rem; }
+  .prod-top { grid-template-columns: 1fr; gap: 2rem; }
+  .prod-sec { padding-top: 3rem; }
   .split { grid-template-columns: 1fr; gap: 1.75rem; }
   .foot-legal { margin-left: 0; width: 100%; }
 }

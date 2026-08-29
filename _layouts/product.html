@@ -1,0 +1,79 @@
+---
+layout: default
+---
+<section class="prod-hero">
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="{{ '/products/' | relative_url }}">Products</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ page.model }}</span>
+  </nav>
+
+  <div class="prod-top">
+    <div class="shot large">
+      <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt }}"
+           width="{{ page.image_w }}" height="{{ page.image_h }}" decoding="async">
+    </div>
+
+    <div class="prod-id">
+      <p class="pn">{{ page.model }}</p>
+      <h1>{{ page.name }}</h1>
+      <p class="lede">{{ page.summary }}</p>
+
+      {% if page.highlights %}
+      <ul class="highlights">
+        {% for h in page.highlights %}<li>{{ h }}</li>{% endfor %}
+      </ul>
+      {% endif %}
+
+      <p><a class="cta buy" href="{{ page.buy }}">Buy on Amazon</a></p>
+      <p class="buy-note">Sold on Amazon. Current price and stock are shown there.</p>
+    </div>
+  </div>
+</section>
+
+{% if page.overview %}
+<section class="prod-sec">
+  <h2>Overview</h2>
+  <div class="prose">{{ page.overview | markdownify }}</div>
+</section>
+{% endif %}
+
+<section class="prod-sec" id="specs">
+  <h2>Specifications</h2>
+  <div class="spec-groups">
+    {% for g in page.specs %}
+    <div class="spec-group">
+      <h3>{{ g.group }}</h3>
+      <dl class="spec">
+        {% for row in g.items %}
+        <div><dt>{{ row.k }}</dt><dd>{{ row.v }}</dd></div>
+        {% endfor %}
+      </dl>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% if page.notes %}
+<section class="prod-sec">
+  <h2>Notes</h2>
+  <div class="prose">{{ page.notes | markdownify }}</div>
+</section>
+{% endif %}
+
+<section class="prod-sec" id="other">
+  <h2>Other products</h2>
+  <div class="grid three">
+    {% assign others = site.pages | where: "type", "product" | sort: "order" %}
+    {% for p in others %}{% unless p.url == page.url %}
+    <a class="mini" href="{{ p.url | relative_url }}">
+      <div class="shot mini-shot">
+        <img src="{{ p.image | relative_url }}" alt="" width="{{ p.image_w }}"
+             height="{{ p.image_h }}" loading="lazy" decoding="async">
+      </div>
+      <p class="pn">{{ p.model }}</p>
+      <p class="mini-name">{{ p.name }}</p>
+    </a>
+    {% endunless %}{% endfor %}
+  </div>
+</section>

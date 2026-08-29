@@ -1,0 +1,97 @@
+---
+layout: product
+permalink: /products/rf-2a4m1/
+type: product
+order: 1
+
+model: RF 2A4M1
+name: Wi-Fi 4 USB 2 Nano Wireless Adapter
+title: RF 2A4M1 — Wi-Fi 4 USB Nano Adapter
+description: >-
+  GenBasic RF 2A4M1 — a 2.4 GHz 802.11n USB nano adapter for Linux, plug and
+  play on current kernels with WPA3 SAE support.
+summary: >-
+  A 2.4 GHz single-stream adapter in a nano housing, sized to leave the
+  neighbouring USB ports clear and specified to stay inside a USB 2.0 port's
+  power budget.
+
+image: /assets/img/wifi4-nano.jpg
+image_w: 1500
+image_h: 1257
+image_alt: >-
+  GenBasic RF 2A4M1 Wi-Fi 4 USB nano adapter, a small black USB plug marked
+  2A4M1 and GenBasic
+
+buy: https://www.amazon.com/dp/B0BNFKJPXS
+
+highlights:
+  - 2.4 GHz 802.11b/g/n, up to 150 Mbps
+  - 19 × 14 × 5 mm nano housing
+  - WPA3 SAE and 802.1X
+  - No driver install on current Linux kernels
+
+overview: |
+  RF 2A4M1 is the entry point of the GenBasic adapter line: one 2.4 GHz
+  stream, no Bluetooth radio, and a housing small enough that it does not
+  overhang the ports beside it.
+
+  It is built for the case where a board needs network access and nothing
+  more — a headless deployment, a sensor node, a machine whose Ethernet run
+  is impractical. Because it sits on the kernel's own wireless stack, it
+  presents as an ordinary interface to NetworkManager, `iw` and
+  `wpa_supplicant`, and there is no module to rebuild when the OS updates.
+
+  Its low-power design matters more than it sounds: a USB 2.0 port budgets
+  500 mA, and an adapter that exceeds it destabilises whatever else shares
+  the hub.
+
+specs:
+  - group: Radio
+    items:
+      - k: Bands
+        v: 2.4 GHz
+      - k: Standard
+        v: 802.11b/g/n (Wi-Fi 4)
+      - k: Max PHY rate
+        v: 150 Mbps at 40 MHz · 72.2 Mbps at 20 MHz
+      - k: Spatial streams
+        v: 1T1R
+      - k: Antenna
+        v: 2 dBi integrated
+      - k: Bluetooth
+        v: None
+  - group: Security
+    items:
+      - k: Encryption
+        v: WPA3 SAE · WPA2
+      - k: Access control
+        v: 802.1X
+  - group: Interface
+    items:
+      - k: Bus
+        v: USB 2.0 Type-A
+      - k: Power budget
+        v: Within USB 2.0 500 mA
+      - k: Dimensions
+        v: 19 × 14 × 5 mm
+  - group: Software
+    items:
+      - k: Stack
+        v: mac80211 / cfg80211
+      - k: Modes
+        v: Station · AP · monitor
+      - k: Linux
+        v: Current LTS kernels, no install
+      - k: Other
+        v: Windows
+
+notes: |
+  The 150 Mbps figure is a PHY rate and requires an access point advertising
+  40 MHz channels; on 20 MHz the ceiling is 72.2 Mbps. Real throughput
+  depends on signal to noise and reaches roughly 75% of PHY rate in a quiet
+  environment at 10 m.
+
+  If the adapter drops off the USB bus, fails to enumerate, or runs slow,
+  check the board's supply before suspecting the radio — see the
+  [5V 3A power supply](/products/power-supply-5v3a/).
+---
