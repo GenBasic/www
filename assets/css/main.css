@@ -303,11 +303,53 @@ section:last-of-type { padding-bottom: 5rem; }
 .none { color: var(--fg-mute); }
 
 .card-note {
-  margin: auto 0 0;
+  margin: 0 0 1rem;
   padding-top: 0.35rem;
   font-size: 0.88rem;
   line-height: 1.55;
   color: var(--fg-dim);
+}
+
+/* Two-up layout for the adapter pair and the power row, so a 2-item set does
+   not stretch to full width the way auto-fit would. */
+.grid.two { grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); }
+
+.card > p:last-child { margin: auto 0 0; padding-top: 0.35rem; }
+.card > p:last-child .cta { margin-right: 0.4rem; }
+
+/* Sits beside a product card as prose rather than specs. */
+.callout {
+  background:
+    linear-gradient(180deg, rgba(46, 230, 197, 0.05), transparent 40%),
+    var(--bg-lift);
+  border: 1px solid var(--line-soft);
+  border-left: 2px solid var(--accent-dim);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+.callout h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  font-weight: 650;
+  color: var(--fg);
+}
+
+.callout p {
+  margin: 0 0 0.85rem;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--fg-dim);
+}
+.callout p:last-child { margin-bottom: 0; }
+
+code {
+  font-family: var(--mono);
+  font-size: 0.88em;
+  padding: 0.1em 0.35em;
+  border-radius: 5px;
+  background: var(--surface-2);
+  color: var(--fg);
 }
 
 /* ---- comparison table ----------------------------------------------- */
@@ -426,6 +468,8 @@ tbody th .pn { margin: 0; font-size: 0.85rem; }
   color: var(--fg);
 }
 .cta.ghost:hover { background: var(--surface); border-color: #33404f; }
+
+.cta.small { padding: 0.55rem 1rem; font-size: 0.88rem; }
 
 /* ---- footer --------------------------------------------------------- */
 

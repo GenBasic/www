@@ -1,8 +1,8 @@
 title: GenBasic
-tagline: Wireless USB adapters
+tagline: Wireless adapters &amp; power for SBCs
 description: >-
-  GenBasic wireless USB adapters — 2.4 GHz and dual-band Wi-Fi with Bluetooth,
-  each shipping an open-source Linux driver.
+  GenBasic USB Wi-Fi and Bluetooth adapters and UL-listed power supplies for
+  Raspberry Pi, Libre Computer and other single-board computers.
 url: https://genbasic.com
 baseurl: ""
 
