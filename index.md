@@ -35,8 +35,13 @@ description: >-
   <div class="grid two">
 
     <article class="card">
-      <p class="pn">Wi-Fi 4 &middot; Nano</p>
-      <h3>WiFi 4 USB Nano Wireless<br>Network Dongle</h3>
+      <div class="shot">
+        <img src="{{ '/assets/img/wifi4-nano.jpg' | relative_url }}"
+             alt="GenBasic RF 2A4M1 Wi-Fi 4 USB nano adapter, a small black USB plug marked 2A4M1 and GenBasic"
+             width="1500" height="1257" loading="lazy" decoding="async">
+      </div>
+      <p class="pn">RF 2A4M1</p>
+      <h3>Wi-Fi 4 USB 2 Nano<br>Wireless Adapter</h3>
       <dl class="spec">
         <div><dt>Band</dt><dd>2.4 GHz</dd></div>
         <div><dt>Standard</dt><dd>802.11b/g/n</dd></div>
@@ -54,13 +59,18 @@ description: >-
     </article>
 
     <article class="card feature">
-      <p class="pn">Wi-Fi 5 + BT 4 &middot; Mini</p>
-      <h3>WiFi 5 Bluetooth BT4 USB Mini<br>Wireless Network Dongle</h3>
+      <div class="shot">
+        <img src="{{ '/assets/img/wifi5-bt-mini.jpg' | relative_url }}"
+             alt="GenBasic RF 2A5R1B4 Wi-Fi 5 Bluetooth USB mini adapter, a black USB plug marked GenBasic"
+             width="1500" height="1437" loading="lazy" decoding="async">
+      </div>
+      <p class="pn">RF 2A5R1B4</p>
+      <h3>Wi-Fi 5 + BT 4.2 USB 2<br>Wireless Adapter</h3>
       <dl class="spec">
         <div><dt>Bands</dt><dd>2.4 + 5 GHz</dd></div>
         <div><dt>Standard</dt><dd>802.11ac/b/g/n</dd></div>
         <div><dt>Rate</dt><dd>up to 433 Mbps <span class="dim">(80 MHz)</span></dd></div>
-        <div><dt>Bluetooth</dt><dd class="yes">4.0</dd></div>
+        <div><dt>Bluetooth</dt><dd class="yes">4.2</dd></div>
         <div><dt>Antenna</dt><dd>1T1R, 2 dBi integrated</dd></div>
         <div><dt>Size</dt><dd>33 &times; 15 &times; 8 mm</dd></div>
         <div><dt>Bus</dt><dd>USB 2.0 Type-A</dd></div>
@@ -88,14 +98,14 @@ description: >-
       </thead>
       <tbody>
         <tr>
-          <th scope="row">Wi-Fi 4 Nano</th>
+          <th scope="row"><span class="pn">RF 2A4M1</span></th>
           <td>2.4 GHz</td><td>802.11b/g/n</td><td>150 Mbps</td>
           <td class="none">&mdash;</td><td>19 &times; 14 &times; 5 mm</td>
         </tr>
         <tr>
-          <th scope="row">Wi-Fi 5 + BT4 Mini</th>
+          <th scope="row"><span class="pn">RF 2A5R1B4</span></th>
           <td>2.4 + 5 GHz</td><td>802.11ac/b/g/n</td><td>433 Mbps</td>
-          <td class="yes">4.0</td><td>33 &times; 15 &times; 8 mm</td>
+          <td class="yes">4.2</td><td>33 &times; 15 &times; 8 mm</td>
         </tr>
       </tbody>
     </table>
@@ -118,20 +128,26 @@ description: >-
 
   <div class="grid two">
     <article class="card">
-      <p class="pn">USB Type-C &middot; UL Listed</p>
-      <h3>5V 3A 15W Power Supply<br>with Switch &amp; MicroUSB Adapter</h3>
+      <div class="shot">
+        <img src="{{ '/assets/img/power-supply.jpg' | relative_url }}"
+             alt="GenBasic 5V 3A 15W USB Type-C power supply with an inline switch with red button and status LED"
+             width="1500" height="1489" loading="lazy" decoding="async">
+      </div>
+      <p class="pn">5V 3A &middot; UL Listed</p>
+      <h3>15W USB Type-C Power Supply<br>with Switch &amp; MicroUSB Adapter</h3>
       <dl class="spec">
         <div><dt>Output</dt><dd>5 V &nbsp;3 A &nbsp;15 W</dd></div>
         <div><dt>Connector</dt><dd>USB Type-C</dd></div>
         <div><dt>Included</dt><dd>MicroUSB adapter</dd></div>
-        <div><dt>Switch</dt><dd>Inline, LED indicator</dd></div>
+        <div><dt>Cable</dt><dd>1.5 m</dd></div>
+        <div><dt>Switch</dt><dd>Inline, status LED</dd></div>
         <div><dt>Safety</dt><dd class="yes">UL Listed</dd></div>
         <div><dt>Plug</dt><dd>US</dd></div>
       </dl>
       <p class="card-note">
         Fits Raspberry Pi 3 and 4 and Libre Computer boards — Type-C natively,
         MicroUSB with the bundled adapter. The switch saves unplugging the
-        barrel every reboot.
+        cable every reboot.
       </p>
       <p>
         <a class="cta ghost small" href="https://www.amazon.com/dp/B0C8V23K7Z">Single</a>
@@ -191,13 +207,4 @@ description: >-
       <p class="panel-value">Windows</p>
     </div>
   </div>
-</section>
-
-<section id="support">
-  <div class="sec-head">
-    <h2>Support</h2>
-    <p>Manuals, pairing steps and troubleshooting for every GenBasic product
-       live on the product wiki.</p>
-  </div>
-  <p><a class="cta ghost" href="http://wiki.genbasic.com/">Open the product wiki</a></p>
 </section>
