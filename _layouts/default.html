@@ -11,6 +11,13 @@
 <meta property="og:url" content="{{ page.url | absolute_url }}">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#ffffff">
+<link rel="icon" href="{{ '/assets/img/genbasic-mark.svg' | relative_url }}" type="image/svg+xml">
+<!-- Advent Pro is the logo's own typeface. The wordmark is set as live text in
+     it rather than shipped as SVG <text>, because an SVG served through <img>
+     cannot load a webfont and falls back to a serif. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@400;700&amp;display=swap">
 <!-- Version token busts the CDN/browser cache on every build. Without it the
      HTML updates immediately while main.css stays cached for up to 10 minutes,
      so a visitor mid-window gets new markup styled by the old stylesheet. -->
@@ -23,7 +30,14 @@
 <header class="site-head">
   <div class="head-inner">
     <a class="wordmark" href="{{ '/' | relative_url }}" aria-label="GenBasic home">
-      <span>GenBasic<span class="tm">&trade;</span></span>
+      <svg class="mark" viewBox="95.79 35.7 345.07 345.07" fill="currentColor"
+           aria-hidden="true" focusable="false">
+        <g transform="matrix(-4.89626,4.89626,-5.56583,-5.56583,6475.14,-1488.38)">
+          <path d="M795.839,409.229L795.786,403.811C795.786,399.875 796.933,396.76 799.226,394.467C801.519,392.174 804.272,390.721 807.486,390.107C808.786,389.818 810.068,389.673 811.332,389.673C812.09,389.673 812.849,389.728 813.607,389.836C815.629,390.089 817.471,390.585 819.132,391.326C820.793,392.066 822.138,393.257 823.167,394.901C824.197,396.544 824.711,398.485 824.711,400.723L824.328,414.252L789.465,420.665L791.378,415.257L819.385,409.898C819.385,409.898 819.46,399.915 819.419,399.335C819.253,396.994 818.098,396.329 817.13,395.828C816.017,395.253 814.582,395.018 813.39,394.982C813.174,394.982 812.957,394.982 812.74,394.982C809.49,394.982 805.916,395.756 803.785,397.236C801.792,398.661 801.556,400.661 801.309,403.306C801.289,403.518 813.082,401.296 813.082,401.296C813.082,401.296 813.06,406.176 813.06,406.347L795.839,409.229Z"
+                fill-rule="nonzero"/>
+        </g>
+      </svg>
+      <span class="wm"><span class="wm-gen">GEN</span><span class="wm-basic">BASIC</span></span>
     </a>
     <nav aria-label="Primary">
       <a href="{{ '/products/' | relative_url }}">Products</a>
@@ -39,7 +53,7 @@
 
 <footer class="site-foot">
   <div class="foot-inner">
-    <p class="foot-brand">GenBasic<span class="tm">&trade;</span></p>
+    <p class="foot-brand"><span class="wm"><span class="wm-gen">GEN</span><span class="wm-basic">BASIC</span></span></p>
     <nav aria-label="Footer">
       <a href="{{ '/products/' | relative_url }}">Products</a>
       <a href="{{ '/products/rf/' | relative_url }}">RF adapters</a>
