@@ -10,7 +10,7 @@ description: >-
   <div class="hero-grid">
     <div class="hero-inner">
       <p class="eyebrow">USB wireless &amp; power</p>
-      <h1>Wireless and power for<br><span class="grad">single-board computers.</span></h1>
+      <h1>Wireless and power for <span class="grad">single-board computers.</span></h1>
       <p class="lede">
         Two USB adapters and a power supply, for boards that have to stay up:
         fixed specifications, in-kernel Linux drivers, and a UL-listed supply

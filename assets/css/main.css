@@ -344,12 +344,16 @@ section:last-of-type { margin-bottom: 0; }
   overflow: hidden;
 }
 
+/* The product photos are shot on near-white, not pure white, which reads as a
+   grey rectangle against the page. multiply drops that ground into the card
+   without touching the product itself. */
 .shot img {
   max-width: 100%;
   max-height: 100%;
   width: auto;
   height: auto;
   object-fit: contain;
+  mix-blend-mode: multiply;
 }
 
 .pn {
