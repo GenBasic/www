@@ -199,11 +199,17 @@ section:last-of-type { margin-bottom: 0; }
   align-items: center;
 }
 
+/* The photos are shot on near-white, so an unframed image floats a faint grey
+   rectangle on the page. Framing it as a panel and multiplying the photo into
+   that panel makes one flat, deliberate surface instead of an artifact. */
 .hero-art {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  padding: 2rem;
+  background: var(--bg-tint);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
 }
 
 .hero-art img {
