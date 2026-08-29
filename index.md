@@ -2,25 +2,74 @@
 layout: default
 title: GenBasic
 description: >-
-  GenBasic USB Wi-Fi and Bluetooth adapters and UL-listed power supplies for
-  Raspberry Pi, Libre Computer and other single-board computers.
+  GenBasic builds wireless adapters and power supplies for commercial and
+  embedded use — tightly specified, tested together, and sold under stable
+  model numbers.
 ---
 
 <section class="hero">
   <div class="hero-inner">
-    <p class="eyebrow">Wireless adapters &amp; power for SBCs</p>
-    <h1>Plug it in.<br><span class="grad">It just comes up.</span></h1>
+    <p class="eyebrow">Electronics for commercial deployment</p>
+    <h1>Parts you can<br><span class="grad">put in a product.</span></h1>
     <p class="lede">
-      USB Wi-Fi and Bluetooth adapters that need no driver install on current
-      Linux kernels — and the UL-listed power supply that keeps them, and the
-      board they are plugged into, actually running.
+      Wireless adapters and power supplies built for commercial and embedded
+      use — specified tightly enough to design around, tested against the
+      hardware they ship beside, and carried under model numbers that mean one
+      fixed thing.
     </p>
     <div class="hero-stats">
-      <div><b>2.4&nbsp;/&nbsp;5</b><span>GHz bands</span></div>
-      <div><b>433</b><span>Mbps, Wi-Fi 5</span></div>
-      <div><b>WPA3</b><span>SAE compliant</span></div>
-      <div><b>15 W</b><span>UL-listed supply</span></div>
+      <div><b>UL</b><span>listed power</span></div>
+      <div><b>WPA3</b><span>SAE &middot; 802.1X</span></div>
+      <div><b>Mainline</b><span>kernel drivers</span></div>
+      <div><b>2.4&nbsp;/&nbsp;5</b><span>GHz dual band</span></div>
     </div>
+  </div>
+</section>
+
+<section id="approach">
+  <div class="sec-head">
+    <h2>What the brand is for</h2>
+    <p>A commercial buyer needs different things from a retail one. Three of
+       them, and what each actually means here.</p>
+  </div>
+
+  <div class="grid three">
+
+    <article class="pillar">
+      <p class="pillar-n">01</p>
+      <h3>Quality</h3>
+      <p>
+        The power supply is <b>UL Listed</b> — a safety certification held
+        against a file number, not a self-declaration. The adapters are
+        engineered to stay inside a USB 2.0 port's 500 mA budget instead of
+        over-drawing it, which is what keeps a hub or an SBC stable when
+        several are populated at once.
+      </p>
+    </article>
+
+    <article class="pillar">
+      <p class="pillar-n">02</p>
+      <h3>Testing</h3>
+      <p>
+        The adapters are validated against the supply that powers them, which
+        is why the adapter documentation names a specific one rather than
+        leaving it to chance. Both are tested on current Linux LTS kernels and
+        on official Libre Computer images — the configurations they are
+        actually deployed in.
+      </p>
+    </article>
+
+    <article class="pillar">
+      <p class="pillar-n">03</p>
+      <h3>Availability</h3>
+      <p>
+        A model number identifies one fixed radio specification, so a unit
+        bought later is the unit you qualified. Staying on in-kernel drivers
+        means there is no out-of-tree module to rebuild each kernel upgrade —
+        a deployed fleet keeps working across OS updates on its own.
+      </p>
+    </article>
+
   </div>
 </section>
 
@@ -55,7 +104,7 @@ description: >-
         Small enough to leave the neighbouring USB ports clear, and low-power
         enough to live inside a USB 2.0 port's 500 mA budget.
       </p>
-      <p><a class="cta ghost small" href="https://www.amazon.com/dp/B0BNFKJPXS">View on Amazon</a></p>
+      <p><a class="cta buy" href="https://www.amazon.com/dp/B0BNFKJPXS">Buy on Amazon</a></p>
     </article>
 
     <article class="card feature">
@@ -79,7 +128,7 @@ description: >-
         Dual-band with Bluetooth on the same dongle. Plug and play on Linux
         6.2 and newer, and on official Libre Computer images.
       </p>
-      <p><a class="cta ghost small" href="https://www.amazon.com/dp/B0CGF9LVL9">View on Amazon</a></p>
+      <p><a class="cta buy" href="https://www.amazon.com/dp/B0CGF9LVL9">Buy on Amazon</a></p>
     </article>
 
   </div>
@@ -149,10 +198,7 @@ description: >-
         MicroUSB with the bundled adapter. The switch saves unplugging the
         cable every reboot.
       </p>
-      <p>
-        <a class="cta ghost small" href="https://www.amazon.com/dp/B0C8V23K7Z">Single</a>
-        <a class="cta ghost small" href="https://www.amazon.com/dp/B0C8V2SP25">5-pack</a>
-      </p>
+      <p><a class="cta buy" href="https://www.amazon.com/dp/B0C8V23K7Z">Buy on Amazon</a></p>
     </article>
 
     <div class="callout">
