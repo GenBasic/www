@@ -11,7 +11,10 @@
 <meta property="og:url" content="{{ page.url | absolute_url }}">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#ffffff">
-<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+<!-- Version token busts the CDN/browser cache on every build. Without it the
+     HTML updates immediately while main.css stays cached for up to 10 minutes,
+     so a visitor mid-window gets new markup styled by the old stylesheet. -->
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 </head>
 <body>
 
